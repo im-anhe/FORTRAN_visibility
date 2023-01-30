@@ -12,7 +12,7 @@ double diffTime(struct timespec t0, struct timespec t1)
 
 int firstOccurance(char line[], char ch, int startIndex)
 {
-    for(int i = startIndex; i<strlen(line); i++)
+    for(int i = startIndex; i<(int)(strlen(line)); i++)
     {
         if(line[i]==ch)
         {
@@ -27,7 +27,7 @@ int detectQuotes(char Line[])
    int single = 0;
    int doubleQuotes = 0;
 
-   for(int i = 0; i<strlen(Line); i++)
+   for(int i = 0; i<(int)strlen(Line); i++)
    {
       if(Line[i] == 39)
       {
@@ -89,7 +89,7 @@ int main()
             char s1[20];
             strcpy(s1,keywords[p]);
             char strupper[20] = " ";
-            for (int i = 0; i<strlen(s1); i++)
+            for (int i = 0; i<(int)strlen(s1); i++)
             {
                if(keywords[p][i]<65 || keywords[p][i]>90)
                {
